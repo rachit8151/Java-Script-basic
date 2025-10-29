@@ -1,0 +1,27 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Develop a JavaScript program to simulate a traffic signal system. Prompt the user to enter a color name (red, yellow, or green), and display the appropriate action: Red → Stop, Yellow → Get Ready, Green → Go. Implement the logic using a switch statement.</title>
+    </head>
+    <body>
+        <script>
+            var signal = window.prompt("Enter the color of traffic signal : ");
+            switch (signal) {
+                case "red":
+                    window.alert("red -> stop");
+                    break;
+                case "yello":
+                    window.alert("yellow -> get ready");
+                    break;
+                case "green":
+                    window.alert("green -> go");
+                    break;
+                default:
+                    window.alert("valid only (red, yellow, or green) color");
+                    break;
+            }
+        </script>
+    </body>
+    </html>

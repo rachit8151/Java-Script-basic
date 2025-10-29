@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program to validate a website signup form. Prompt the user to
+enter a username and password using window.prompt().Verify that the username is
+at least 5 characters long and the password is at least 8 characters long. If either
+condition is not satisfied, display an alert message to the user.</title>
+</head>
+<body>
+    <script>
+        let username = window.prompt("Enter your username (at least 5 characters):");
+        let password = window.prompt("Enter your password (at least 8 characters):");
+
+        if (username.length < 5) {
+            alert("Username must be at least 5 characters long.");
+        } else if (password.length < 8) {
+            alert("Password must be at least 8 characters long.");
+        } else {
+            alert("Signup successful!");
+        }
+    </script>
+</body>
+</html>

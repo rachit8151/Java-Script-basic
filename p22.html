@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Develop a JavaScript program to simulate a simple banking application. Create an
+        account object with properties: accountNumber, accountHolderName, and balance.
+        Include functions deposit(amount) and withdraw(amount) to update the balance,
+        ensuring withdrawals are only allowed if sufficient funds are available.</title>
+</head>
+<body>
+    <script>
+        var bApp = {
+            accountNumber: 2022041,
+            accountHolderName: "Rachit Patel",
+            balance: 2000,
+
+        deposit: function(amount) {
+            this.balance = this.balance + amount;
+            console.log(`Deposited ₹${amount}. New balance: ₹${this.balance}.`);
+        },
+
+        withdraw: function(amount) {
+            if(amount <= this.balance) {
+                this.balance = this.balance - amount;
+                console.log(`Withdrew ₹${amount}. New balance: ₹${this.balance}.`);
+            } else {
+                console.log("Balace is low, not withdrawal")
+            }
+        }
+    };
+        console.log(`Account Holder: ${bApp.accountHolderName}`);
+        console.log(`Account Number: ${bApp.accountNumber}`);
+        console.log(`Starting Balance: ₹${bApp.balance}`);
+        bApp.deposit(1300);
+        bApp.withdraw(4000);
+    </script>
+</body>
+</html>

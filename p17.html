@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an HTML page with a button that changes 
+        a <p> tag’s text using document.getElementById().innerHTML.</title>
+</head>
+<body>
+    <button id="changeTextButton">Change Text</button>
+    <p id="textParagraph">This is the original text.</p>
+    <script>
+        document.getElementById('changeTextButton').addEventListener('click', function() {
+            document.getElementById('textParagraph').innerHTML = 'The text has been changed!';
+        });
+    </script>
+</body>
+</html>

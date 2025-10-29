@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a JavaScript program to create a simple To-Do list. Store tasks in an array with
+        at least three initial items. Use push() to add a new task from user input and pop() to
+        remove the last task. Display the updated list in the console.</title>
+</head>
+<body>
+    <script>
+        var tasks = ["Buy Grosrry", "Read Book", "Write Script"];
+        console.log("Current Task");
+        function displayTasks(){
+            tasks.forEach((task, index) => {
+                console.log(`${index + 1}.${task}`);
+            });
+        }
+        displayTasks();
+        console.log("");
+        
+        console.log("After Add Task");
+        var addTask = window.prompt("Enter new Task");
+        tasks.push(addTask);
+        displayTasks();
+        console.log("");
+
+        console.log("After remove Task");
+        var removeTask = tasks.pop();
+        displayTasks();
+        console.log("");
+    </script>
+</body>
+</html>

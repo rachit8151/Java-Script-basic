@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Develop a JavaScript program to convert temperatures between Celsius and
+Fahrenheit. First, prompt the user to choose the conversion type (C→F or F→C).
+Then, take the temperature value as input and perform the conversion using the
+formulas:
+• C→F: (C × 9/5) + 32,
+• F→C: (F − 32) × 5/9.
+Finally, display the converted value in the console using console.log().</title>
+</head>
+<body>
+    <script>
+        const cf = window.prompt("Enter conversion type: Celsius / Fahrenheit").toLowerCase();
+        let temperature;
+        if (cf === "celsius") {
+            temperature = parseFloat(window.prompt("Enter temperature in Celsius:"));
+            let fahrenheit = (temperature * 9/5) + 32;
+            document.write(`Temperature in Fahrenheit: ${fahrenheit}`);
+        } else if (cf === "fahrenheit") {
+            temperature = parseFloat(window.prompt("Enter temperature in Fahrenheit:"));
+            let celsius = (temperature - 32) * 5/9;
+            document.write(`Temperature in Celsius: ${celsius}`);
+        } else {
+            document.write("Invalid conversion type Enter 'Celsius' or 'Fahrenheit' only.");
+        }
+    </script>
+</body>
+</html>

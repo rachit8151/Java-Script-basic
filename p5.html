@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a script that uses a switch statement to display the name of the day based on 
+        the number entered (1 for Monday, etc.).</title>
+</head>
+<body>
+    <script>
+        var dayNumber = window.prompt("Enter a number (1-7) for the day of the week: ");
+        switch (dayNumber) {
+            case "1":
+                window.alert("Monday");
+                break;
+            case "2":
+                window.alert("Tuesday");
+                break;
+            case "3":
+                window.alert("Wednesday");
+                break;
+            case "4":
+                window.alert("Thursday");
+                break;
+            case "5":
+                window.alert("Friday");
+                break;
+            case "6":
+                window.alert("Saturday");
+                break;
+            case "7":
+                window.alert("Sunday");
+                break;
+            default:
+                window.alert("Please enter a valid number between 1 and 7.");
+                break;
+        }
+    </script>
+</body>
+</html>

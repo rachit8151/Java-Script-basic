@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a JavaScript program that generates a random number between 1 and 10
+using the Math object. Prompt the user to guess the number, allowing up to 3
+attempts. If the guess matches the generated number, display 'You Win!'; otherwise,
+display 'Try Again!'.</title>
+</head>
+<body>
+    <script>
+        const randomNum = Math.floor(Math.random() * 10 + 1);
+        let attempts = 3;
+        let status = false;
+        while (attempts > 0 && !status) {
+            const guessNum = parseInt(prompt(`Guess the number (between 1 and 10). You have ${attempts} attempts left:`), 10);
+            if (guessNum === randomNum) {
+                alert('You Win!');
+                status = true;
+            } else {
+                attempts--;
+                if (attempts > 0) {
+                    alert('Try Again!');
+                } else {
+                    alert(`Sorry, you've used all your attempts. The number was ${randomNum}.`);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

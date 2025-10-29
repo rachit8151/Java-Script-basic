@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build a JavaScript program to simulate an online shopping cart. Store product prices
+in an array, calculate the total using a loop, and display it in the console. If the total
+exceeds ₹2000, show a message 'You are eligible for free delivery!' using
+window.alert()."</title>
+</head>
+<body>
+    <script>
+        let prices = [500, 1200, 300, 800];
+        let total = 0;
+
+        for (let i = 0; i < prices.length; i++) {
+            total += prices[i];
+        }
+
+        console.log("Total price of items in the cart: " + total);
+
+        if (total > 2000) {
+            window.alert("You are eligible for free delivery!");
+        } else {
+            window.alert("Your total does not exceed ₹2000. Free delivery not applicable.");
+        }
+    </script>
+</body>
+</html>

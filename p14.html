@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Develop a JavaScript function that prompts the user to enter a string, counts the total
+number of words in the input using string methods and loops, and then displays the
+word count in the console.</title>
+</head>
+<body>
+    <script>
+        function wordsCount() {
+            let str = window.prompt("Enter a string:");
+            var count = 0;
+            
+            for(let i=0 ; i<str.length; i++) {
+                if(str[i] === " " && str[i+1] != " ") {
+                    count++;
+                }
+            }
+        document.write(`Total number of words: ${count + 1}` + "<br>");
+        }
+        wordsCount();
+
+    </script>
+</body>
+</html>

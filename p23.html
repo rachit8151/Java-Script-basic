@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a JavaScript program for a movie ticket booking system. Store a list of movie
+names in an array, prompt the user to select a movie by entering its index, and
+display a confirmation message: 'You have booked a ticket for [Movie Name]'.</title>
+</head>
+<body>
+    <script>
+        var movies = ["Wednesday", "The Nun 2", "Hellaro", "War 2", "Mr. India"];
+        console.log("Available movies:");
+        for (var i = 0; i < movies.length; i++) {
+            console.log(`${i}: ${movies[i]}`);
+            console.log();
+        }
+        var mi = window.prompt("Select a movie by entering its index (0 to " + (movies.length-1) + "):");
+        if (mi >= 0 && mi < movies.length) {
+            var selectedMovie = movies[mi];
+            console.log(`You have booked a ticket for ${selectedMovie}.`);
+        } else {
+            console.log("Invalid movie selection. Please enter a valid index.");
+        }
+        
+    </script>
+</body>
+</html>

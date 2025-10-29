@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a program to loop through all properties of the student 
+        object using for...in.</title>
+</head>
+<body>
+    <script>
+        const s = {
+            name: "Rachit Patel",
+            age: 20,
+            course: "Integrated MSc.IT",
+            college: "BMIIT",
+            city: "Surat",
+            country: "India"
+        };
+        for (let key in s) {
+            document.write(`${key}: ${s[key]}` + "<br>");
+        }
+    </script>
+</body>
+</html>

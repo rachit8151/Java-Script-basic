@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a JavaScript program to evaluate student performance. Prompt the user to
+enter marks for three subjects, then calculate and display the total and average.
+Based on the average, assign a grade as follows:
+• A for average ≥ 80,
+• B for 60–79,
+• C for 40–59, and
+• Fail for average < 40.
+Implement the grading logic using if...else statements.</title>
+</head>
+<body>
+    <script>
+        let subject1 = parseFloat(prompt("Enter marks for Subject 1:"));
+        let subject2 = parseFloat(prompt("Enter marks for Subject 2:"));
+        let subject3 = parseFloat(prompt("Enter marks for Subject 3:"));
+
+        let total = 0;
+        let average = 0;
+        let grade = "";
+        if (isNaN(subject1) || isNaN(subject2) || isNaN(subject3)) {
+            alert("Please enter valid numeric marks for all subjects.");
+        } else {
+        total = subject1 + subject2 + subject3;
+        average = total / 3;
+
+            if (average >= 80) {
+                grade = "A";
+            } else if (average >= 60) {
+                grade = "B";
+            } else if (average >= 40) {
+                grade = "C";
+            } else {
+                grade = "Fail";
+            }   
+        }
+        console.log("Marks for Subject 1: " + subject1);
+        console.log("Marks for Subject 2: " + subject2);
+        console.log("Marks for Subject 3: " + subject3);
+        console.log("Total Marks: " + total);
+        console.log("Average Marks: " + average);
+        console.log("Grade: " + grade);
+    </script>
+</body>
+</html>
